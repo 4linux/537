@@ -11,3 +11,4 @@ ENV DB_PASS=''
 RUN apk add --no-cache php-cli php-mysqli php-session php81-pecl-memcached && mkdir /app
 COPY . /app
 WORKDIR /app
+ENTRYPOINT ["sh", "-c", "php -c $PHP_INI -S 0.0.0.0:8080 -t /app"]
