@@ -1,4 +1,5 @@
 FROM python:3.9-slim-buster
+EXPOSE 8080
 
 ENV REDISHOST=''
 ENV REDISPORT=''
