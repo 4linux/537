@@ -3,7 +3,7 @@ import pandas
 
 spark = SparkSession.builder.appName("Test").getOrCreate()
 
-funcionarios = spark.read.csv("gs://database_cloud_engineer_seu_nome/exports/export_usuarios.csv")
+funcionarios = spark.read.csv("gs://database_cloud_engineer2_seu_nome/exports/export_usuarios.csv")
 column_list = ['id','nome','departamento','salario','email','senha','cadastro']
 funcionarios = funcionarios.toDF(*column_list)
 
